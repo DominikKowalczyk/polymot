@@ -1,6 +1,6 @@
 # Polymot Chrome Extension
 
-# Polymot is a powerful Chrome extension designed to streamline your interactions with multiple language models (LLMs) in real-time. Revolutionize your browsing experience by effortlessly engaging with various language models simultaneously, opening up new possibilities for efficient communication and exploration.
+## Polymot is a powerful Chrome extension designed to streamline your interactions with multiple language models (LLMs) in real-time. Revolutionize your browsing experience by effortlessly engaging with various language models simultaneously, opening up new possibilities for efficient communication and exploration.
 
 ## Features
 
