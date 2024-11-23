@@ -1,0 +1,150 @@
+/* Define CSS variables for dark theme */
+:root {
+    --background-color-dark: #1e1e1e;
+    --text-color-dark: #d4d4d4;
+    --link-color-dark: #569cd6;
+    --heading-color-dark: #d4d4d4;
+    --paragraph-color-dark: #d4d4d4;
+    --code-background-color-dark: #2e2e2e;
+    --code-text-color-dark: #d4d4d4;
+    --blockquote-background-color-dark: #2e2e2e;
+    --blockquote-text-color-dark: #d4d4d4;
+    --blockquote-border-color-dark: #569cd6;
+  }
+  
+  /* Default dark mode styles */
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    font-family: 'Consolas', 'Courier New', monospace;
+  }
+  
+  a {
+    color: var(--link-color-dark);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color-dark);
+  }
+  
+  p {
+    color: var(--paragraph-color-dark);
+  }
+  
+  code, pre {
+    background-color: var(--code-background-color-dark);
+    color: var(--code-text-color-dark);
+    border-radius:  3px;
+  }
+  
+  blockquote {
+    background-color: var(--blockquote-background-color-dark);
+    color: var(--blockquote-text-color-dark);
+    border-left:  4px solid var(--blockquote-border-color-dark);
+  }
+
+  /* General styles */
+body {
+    margin:  0;
+    padding:  0;
+    font-family: 'Ubuntu', 'Consolas', 'Courier New', monospace;
+}
+
+/* Chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height:  100vh;
+}
+
+/* Chat messages */
+.chat-messages {
+    flex:  1;
+    overflow-y: auto;
+    padding:  10px;
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+    align-items: center;
+    padding:  10px;
+    border-top:  1px solid #ddd;
+}
+
+/* Input field */
+.input-area input {
+    flex-grow:  1;
+    border: none;
+    padding:  10px;
+    border-radius:  3px;
+}
+
+/* Send button */
+.input-area button {
+    margin-left:  10px;
+    background-color: #569cd6;
+    color: white;
+    border: none;
+    padding:  10px  15px;
+    border-radius:  3px;
+    cursor: pointer;
+}
+
+/* Media query for mobile devices */
+@media (max-width:  600px) {
+    .chat-container {
+        width:  100%;
+        height:  100%;
+    }
+}
+
+  
+  /* Light mode styles for users who prefer it */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --background-color-light: white;
+      --text-color-light: black;
+      --link-color-light: #007acc;
+      --heading-color-light: black;
+      --paragraph-color-light: black;
+      --code-background-color-light: #f4f4f4;
+      --code-text-color-light: black;
+      --blockquote-background-color-light: #f4f4f4;
+      --blockquote-text-color-light: black;
+      --blockquote-border-color-light: #007acc;
+      --font-family-mono: 'Ubuntu', 'Consolas', 'Courier New', monospace;
+      --font-family-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    body {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
+      font-family: var(--font-family);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    a {
+      color: var(--link-color-light);
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--heading-color-light);
+    }
+  
+    p {
+      color: var(--paragraph-color-light);
+    }
+  
+    code, pre {
+      background-color: var(--code-background-color-light);
+      color: var(--code-text-color-light);
+      border-radius:  3px;
+    }
+  
+    blockquote {
+      background-color: var(--blockquote-background-color-light);
+      color: var(--blockquote-text-color-light);
+      border-left:  4px solid var(--blockquote-border-color-light);
+    }
+  }
