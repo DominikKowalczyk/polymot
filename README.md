@@ -15,11 +15,11 @@ The name 'Polymot' draws inspiration from the ancient Greek term 'polyglottos', 
 
 ## How It Works
 
-Replace your default new tab with Polymot, and unlock the ability to converse with multiple language models at once. Whether you're gathering diverse perspectives or seeking information, Polymot simplifies the process of interacting with various language models.
+Replace your default new tab with Polymot, and unlock the ability to converse with multiple language models at once. Whether you're gathering diverse perspectives or seeking information, Polymot simplifies the process of interacting with various language models. Under the hood, polymot talks to different LLMs using Tree of Thought methodology to get to the best possible answear.
 
 ## Getting Started
 
-1. Install the PolyglotChatHub Chrome extension.
+1. Install the Polymot Chrome extension.
 2. Open a new tab to access the unified interface.
 3. Connect with multiple language models simultaneously and start engaging in efficient and dynamic conversations.
 
