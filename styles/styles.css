@@ -1,64 +1,49 @@
-/* Define CSS variables for dark theme */
 :root {
-    --background-color-dark: #1e1e1e;
-    --text-color-dark: #d4d4d4;
-    --link-color-dark: #569cd6;
-    --heading-color-dark: #d4d4d4;
-    --paragraph-color-dark: #d4d4d4;
-    --code-background-color-dark: #2e2e2e;
-    --code-text-color-dark: #d4d4d4;
-    --blockquote-background-color-dark: #2e2e2e;
-    --blockquote-text-color-dark: #d4d4d4;
-    --blockquote-border-color-dark: #569cd6;
-  }
-  
-  /* Default dark mode styles */
-  body {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-    font-family: 'Consolas', 'Courier New', monospace;
-  }
-  
-  a {
-    color: var(--link-color-dark);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-color-dark);
-  }
-  
-  p {
-    color: var(--paragraph-color-dark);
-  }
-  
-  code, pre {
-    background-color: var(--code-background-color-dark);
-    color: var(--code-text-color-dark);
-    border-radius:  3px;
-  }
-  
-  blockquote {
-    background-color: var(--blockquote-background-color-dark);
-    color: var(--blockquote-text-color-dark);
-    border-left:  4px solid var(--blockquote-border-color-dark);
-  }
+  /* Enable light and dark mode color schemes */
+  color-scheme: light dark;
 
-  /* General styles */
-/* General styles */
+  /* Define shared colors as variables */
+  --color-background: light-dark(#efedea, #1e1e1e);
+  --color-text: light-dark(#333b3c, #d4d4d4);
+  --color-link: light-dark(#007acc, #569cd6);
+  --color-heading: var(--color-text);
+  --color-paragraph: var(--color-text);
+  --color-code-bg: light-dark(#f4f4f4, #2e2e2e);
+  --color-code-text: var(--color-text);
+  --color-blockquote-bg: var(--color-code-bg);
+  --color-blockquote-text: var(--color-text);
+  --color-blockquote-border: var(--color-link);
+
+  /* Component-specific colors */
+  --color-chat-bg: light-dark(#fdfcfb, #252526);
+  --color-chat-shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  --color-input-border: var(--color-link);
+  --color-button-bg: var(--color-link);
+  --color-button-hover-bg: light-dark(#005bb5, #007acc);
+
+  /* Typography */
+  --font-family-base: 'Ubuntu', 'Consolas', 'Courier New', monospace;
+  --font-family-alt: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Spacing */
+  --border-radius: 5px;
+}
+
+/* Base styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', 'Consolas', 'Courier New', monospace;
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
 }
 
-/* Center content */
+/* Chat container */
 .chat-container {
   display: flex;
   flex-direction: column;
@@ -67,9 +52,9 @@ body {
   width: 100%;
   max-width: 600px;
   height: 100%;
-  background-color: #252526;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-chat-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 6px var(--color-chat-shadow);
   padding: 20px;
   box-sizing: border-box;
 }
@@ -80,10 +65,10 @@ body {
   overflow-y: auto;
   width: 100%;
   padding: 10px;
-  background-color: #2e2e2e;
-  border-radius: 10px;
+  background-color: var(--color-code-bg);
+  border-radius: var(--border-radius);
   margin-bottom: 20px;
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 2px 4px var(--color-chat-shadow);
 }
 
 /* Input area */
@@ -98,17 +83,17 @@ body {
   flex-grow: 1;
   padding: 12px;
   font-size: 16px;
-  border: 2px solid #569cd6;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-  color: var(--text-color-dark);
+  border: 2px solid var(--color-input-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-background);
+  color: var(--color-text);
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .input-area input:focus {
-  border-color: #007acc;
-  box-shadow: 0px 0px 5px #007acc;
+  border-color: var(--color-button-hover-bg);
+  box-shadow: 0px 0px 5px var(--color-button-hover-bg);
 }
 
 /* Send button */
@@ -116,16 +101,16 @@ body {
   margin-left: 10px;
   padding: 12px 20px;
   font-size: 16px;
-  background-color: #569cd6;
+  background-color: var(--color-button-bg);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .input-area button:hover {
-  background-color: #007acc;
+  background-color: var(--color-button-hover-bg);
   transform: scale(1.05);
 }
 
@@ -138,64 +123,12 @@ footer {
   margin-top: 20px;
   font-size: 14px;
   text-align: center;
-  color: var(--text-color-dark);
+  color: var(--color-text);
 }
 
-/* Media query for mobile devices */
-@media (max-width:  600px) {
-    .chat-container {
-        width:  100%;
-        height:  100%;
-          padding: 10px;
-    }
-}
-
-  
-  /* Light mode styles for users who prefer it */
-  @media (prefers-color-scheme: light) {
-    :root {
-      --background-color-light: white;
-      --text-color-light: black;
-      --link-color-light: #007acc;
-      --heading-color-light: black;
-      --paragraph-color-light: black;
-      --code-background-color-light: #f4f4f4;
-      --code-text-color-light: black;
-      --blockquote-background-color-light: #f4f4f4;
-      --blockquote-text-color-light: black;
-      --blockquote-border-color-light: #007acc;
-      --font-family-mono: 'Ubuntu', 'Consolas', 'Courier New', monospace;
-      --font-family-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-  
-    body {
-      background-color: var(--background-color-light);
-      color: var(--text-color-light);
-      font-family: var(--font-family);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-  
-    a {
-      color: var(--link-color-light);
-    }
-  
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--heading-color-light);
-    }
-  
-    p {
-      color: var(--paragraph-color-light);
-    }
-  
-    code, pre {
-      background-color: var(--code-background-color-light);
-      color: var(--code-text-color-light);
-      border-radius:  3px;
-    }
-  
-    blockquote {
-      background-color: var(--blockquote-background-color-light);
-      color: var(--blockquote-text-color-light);
-      border-left:  4px solid var(--blockquote-border-color-light);
-    }
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .chat-container {
+    padding: 10px;
   }
+}
