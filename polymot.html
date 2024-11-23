@@ -8,29 +8,20 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Polymot</h1>
-        <p>Your gateway to simultaneous communication with multiple language models.</p>
-    </header>
-    
-    <section id="main-content">
-        <h2>Start Engaging</h2>
-        <p>Connect with various language models and experience the power of Polymot.</p>
-        <!-- Add more content or interactive elements as needed -->
-    </section>
-    
     <main class="chat-container" aria-live="polite">
-        <section class="chat-message" role="region" aria-label="User message">
-           <!-- Integrated input field and button for user messages -->
-        <input class="input-area" type="text" id="userMessage" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
-        </section>
-        <section class="message" role="region" aria-label="Assistant message">
-            <h2 class="assistant">Assistant:</h2>
-            <p>Hello, User! How can I assist you today?</p>
-        </section>
-
+        <header>
+            <h1>Welcome to Polymot</h1>
+            <p>Your gateway to simultaneous communication with multiple language models.</p>
+        </header>
         
+        <section class="chat-messages" role="region" aria-label="Chat messages">
+            <!-- Messages will be dynamically added here -->
+        </section>
+        
+        <section class="input-area" role="region" aria-label="Input message">
+            <input type="text" id="userMessage" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </section>
     </main>
 
     <footer>
@@ -39,4 +30,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
