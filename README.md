@@ -29,4 +29,4 @@ We welcome contributions! If you'd like to enhance Polymot or address issues, pl
 
 ## License
 
-PolyglotChatHub is licensed under the [MIT License](license.md).
+Polymot is licensed under the [MIT License](license.md).
