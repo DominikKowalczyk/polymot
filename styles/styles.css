@@ -17,9 +17,48 @@
   /* Component-specific colors */
   --color-chat-bg: light-dark(#fdfcfb, #252526);
   --color-chat-shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
-  --color-input-border: var(--color-link);
+
+  /* Buttons */
   --color-button-bg: var(--color-link);
   --color-button-hover-bg: light-dark(#005bb5, #007acc);
+  --color-button-disabled-bg: light-dark(#cccccc, #555555);
+  --color-button-text: white;
+  
+  /* Input fields */
+  --color-input-border: var(--color-link);
+  --color-input-bg: var(--color-background);
+  --color-input-placeholder: light-dark(#999999, #aaaaaa);
+  --color-input-disabled-bg: light-dark(#f4f4f4, #2a2a2a);
+  
+  /* Text areas */
+  --color-textarea-border: var(--color-input-border);
+  --color-textarea-bg: var(--color-input-bg);
+  --color-textarea-placeholder: var(--color-input-placeholder);
+  
+  /* Select dropdowns */
+  --color-select-bg: var(--color-background);
+  --color-select-border: var(--color-input-border);
+  --color-select-option-bg: light-dark(#fdfcfb, #3a3a3a);
+  --color-select-hover-bg: light-dark(#eeeeee, #444444);
+  
+  /* Checkboxes and radio buttons */
+  --color-checkbox-border: var(--color-input-border);
+  --color-checkbox-bg: var(--color-background);
+  --color-checkbox-checked-bg: var(--color-link);
+  --color-checkbox-hover-bg: light-dark(#dddddd, #444444);
+  
+  /* Modals */
+  --color-modal-bg: light-dark(#ffffff, #2e2e2e);
+  --color-modal-overlay: rgba(0, 0, 0, 0.6);
+  
+  /* Alerts */
+  --color-alert-success-bg: light-dark(#dff0d8, #213d21);
+  --color-alert-warning-bg: light-dark(#fcf8e3, #4e4321);
+  --color-alert-error-bg: light-dark(#f2dede, #4a2121);
+  
+  /* Tooltips */
+  --color-tooltip-bg: light-dark(#222222, #e8e8e8);
+  --color-tooltip-text: light-dark(#ffffff, #000000);
 
   /* Typography */
   --font-family-base: 'Ubuntu', 'Consolas', 'Courier New', monospace;
