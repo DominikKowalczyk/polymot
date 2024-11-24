@@ -17,6 +17,8 @@
 	},
 	"chrome_url_overrides": {
 	  "newtab": "polymot.html"
-	}
-  }
+	},
+	"background": {
+		"scripts": ["config.js"]
+	  }
   
