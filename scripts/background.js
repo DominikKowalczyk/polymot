@@ -1,12 +1,6 @@
-import config from './config.js';
+import './search.js'; // Include the search module
 
-// Function to log the config (or extend it if needed)
-async function loadConfig() {
-  console.log('Config loaded:', config);
-  // Additional initialization logic if necessary
-}
-
-// Load the config when the extension installs
+// Initialization logic
 chrome.runtime.onInstalled.addListener(() => {
-  loadConfig();
+  console.log('Polymot extension installed and initialized.');
 });
