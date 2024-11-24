@@ -1,25 +1,25 @@
 {
-	"manifest_version":  3,
+	"manifest_version": 3,
 	"name": "Polymot",
 	"version": "1.0",
 	"description": "Polymot is a powerful Chrome extension designed to streamline your interactions with multiple language models (LLMs) in real-time.",
-	"icons": {                   
-    "16": "assets/images/polymot-icon16.png",
-    "48": "assets/images/polymot-icon48.png",
-    "128": "assets/images/polymot-icon128.png"  
-  }, 
-	"action": {
-	  "default_icon": {
+	"icons": {
 		"16": "assets/images/polymot-icon16.png",
 		"48": "assets/images/polymot-icon48.png",
 		"128": "assets/images/polymot-icon128.png"
-	  }
+	},
+	"action": {
+		"default_icon": {
+			"16": "assets/images/polymot-icon16.png",
+			"48": "assets/images/polymot-icon48.png",
+			"128": "assets/images/polymot-icon128.png"
+		}
 	},
 	"chrome_url_overrides": {
-	  "newtab": "polymot.html"
+		"newtab": "polymot.html"
 	},
 	"background": {
-		"scripts": ["config.js"]
-	  }
+		"service_worker": "scripts/background.js",
+		"type": "module"
 	}
-  
+}
